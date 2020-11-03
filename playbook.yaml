@@ -1,0 +1,23 @@
+---
+- hosts: duo
+  become: true
+  roles:
+   - docker
+   - role: clone
+     vars:
+       - repository: https://github....
+       - destination: /home/path-to-destination
+       
+- hosts: trio
+  become: true
+  roles:
+   - docker
+   - role: clone
+     vars:
+     - repository: https://github...
+     - destination: /home/path-to-this-git-repo
+ 
+- hosts: jenkins
+  become: true
+  roles:
+   - jenkins

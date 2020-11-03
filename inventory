@@ -1,0 +1,6 @@
+[duo]
+instance-1
+[trio]
+instance-2
+[jenkins]
+localhost ansible_connection=local
